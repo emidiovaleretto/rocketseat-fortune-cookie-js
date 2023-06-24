@@ -108,7 +108,7 @@ button {
   background: #e4edf1;
   box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.5);
 
-  animation: quote-animation 2s ease-in-out;
+  animation: quote-animation 1.5s ease-in-out;
 }
 
 button {
@@ -128,39 +128,46 @@ button:hover {
 
 @keyframes shake {
   0% {
-    transform: translateX(0);
-    transform: rotate(0deg);
+    transform: translate(1px, 1px) rotate(0deg);
   }
-  25% {
-    transform: translateX(-5px);
-    transform: rotate(-5deg);
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
   }
   50% {
-    transform: translateX(0);
-    transform: rotate(0deg);
+    transform: translate(-1px, 2px) rotate(-1deg);
   }
-  75% {
-    transform: translateX(5px);
-    transform: rotate(5deg);
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
   }
   100% {
-    transform: translateX(0);
-    transform: rotate(0deg);
+    transform: translate(1px, -2px) rotate(-1deg);
   }
 }
 
 @keyframes quote-animation {
   0% {
-    opacity: 0;
-    width: 0.2rem;
-    height: 0.2rem;
-    font-size: 0.1rem;
-    border-left: none;
-    transform: translateY(13.5rem);
+    transform: translateY(170px) scale(0.1);
   }
+
   100% {
-    opacity: 1;
-    width: 29.2rem;
-    transform: translateY(0);
+    transform: translateY(0px) scale(1);
   }
 }
