@@ -96,6 +96,7 @@ button {
 .box-2 p {
   font-family: "Dancing Script", cursive;
   font-size: 2.4rem;
+  line-height: 1.2;
   text-align: center;
 
   width: 29.2rem;
@@ -106,6 +107,8 @@ button {
 
   background: #e4edf1;
   box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.5);
+
+  animation: quote-animation 2s ease-in-out;
 }
 
 button {
@@ -143,5 +146,21 @@ button:hover {
   100% {
     transform: translateX(0);
     transform: rotate(0deg);
+  }
+}
+
+@keyframes quote-animation {
+  0% {
+    opacity: 0;
+    width: 0.2rem;
+    height: 0.2rem;
+    font-size: 0.1rem;
+    border-left: none;
+    transform: translateY(13.5rem);
+  }
+  100% {
+    opacity: 1;
+    width: 29.2rem;
+    transform: translateY(0);
   }
 }
