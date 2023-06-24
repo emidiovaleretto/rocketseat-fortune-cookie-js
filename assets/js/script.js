@@ -19,10 +19,10 @@ const quotes = [
 
 cookie.addEventListener("click", cookieClick)
 playAgain.addEventListener("click", playAgainClick)
+document.addEventListener("keydown", handleEnterKey)
 
 function cookieClick() {
-  firstBox.classList.add("hidden")
-  secondBox.classList.remove("hidden")
+  handleToogle()
   generateQuote()
 }
 
@@ -34,6 +34,16 @@ function generateQuote() {
 
 function playAgainClick(event) {
   event.preventDefault()
-  firstBox.classList.remove("hidden")
-  secondBox.classList.add("hidden")
+  handleToogle()
+}
+
+function handleToogle() {
+  firstBox.classList.toggle("hidden")
+  secondBox.classList.toggle("hidden")
+}
+
+function handleEnterKey(event) {
+  if (event.key === "Enter" && firstBox.classList.contains("hidden")) {
+    handleToogle()
+  }
 }
