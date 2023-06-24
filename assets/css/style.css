@@ -26,7 +26,7 @@ h2 {
   font-size: 2.4rem;
   line-height: 1.2;
 
-  margin-bottom: 1.6rem;
+  margin-bottom: 1.8rem;
 }
 
 p,
@@ -90,6 +90,36 @@ button {
 
 .box-1 img:hover {
   animation: shake 0.2s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.box-2 p {
+  font-family: "Dancing Script", cursive;
+  font-size: 2.4rem;
+  text-align: center;
+
+  width: 29.2rem;
+  padding: 1rem;
+  margin: 2.8rem;
+
+  border-left: 6px dotted #34355b;
+
+  background: #e4edf1;
+  box-shadow: 2px 2px 2px 0px rgba(85, 85, 85, 0.5);
+}
+
+button {
+  color: #fff;
+  font-weight: 700;
+  padding: 1.6rem;
+  border-radius: 0.4rem;
+  border: none;
+  background-color: #ff9500;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #d07c06;
   cursor: pointer;
 }
 
